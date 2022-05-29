@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+html,
+body {
+  height: 100%;
+}
+
+#page-content {
+  flex: 1 0 auto;
+}
+
+#sticky-footer {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+}
+
+/* Other Classes for Page Styling */
+
+body {
+  background-color: #007bff;
+  background: linear-gradient(to top, #0062E6, #33AEFF);/**/
+}
+
+.choice:hover{
+  background-color: #becfff;
+  cursor: pointer;
+}
+
+.choice:active{
+  border: 2px #20397c solid;
+}
+
+.choice-selected{
+  border: 2px #20397c solid;
+}

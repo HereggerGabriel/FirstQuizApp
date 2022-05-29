@@ -1,0 +1,30 @@
+<div class="container main">
+  <div class="row">
+    <div class="col-4">
+      <div class="card" style="width: 18rem;" *ngIf="!finished">
+        <!--  <img class="card-img-top" src="https://cdn.cultofmac.com/wp-content/uploads/2017/10/Screen-Shot-2017-10-27-at-10.23.34-AM-400x227.jpg" alt="Card image cap"> -->
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="card shadow">
+        <div class="card-header bg-secondary text-white">
+          <h6>Question {{ questionIndex + 1 }} of {{ totalQuestions }}</h6>
+        </div>
+        <div class="card-body question-header question-text">
+          <p class="card-text">{{ questions[questionIndex] }}</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li
+            *ngFor="let choice of choices[questionIndex]; let i = index"
+            class="list-group-item choice"
+            [attr.id]="'choice' + i"
+            (click)="clickChoice($event)"
+            [class.choice-selected]="selectedIndex == i"
+          >
+            {{ choice }}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
